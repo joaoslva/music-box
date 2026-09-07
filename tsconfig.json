@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    "strict": true,
+    // Deliberately NOT noUncheckedIndexedAccess: it makes every typed-array
+    // access in a DSP inner loop `number | undefined`, which is noise here.
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "scripts/**/*.ts"]
+}
